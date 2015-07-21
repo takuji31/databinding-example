@@ -11,8 +11,6 @@ import org.threeten.bp.format.DateTimeFormatter;
  * @author Takuji Nishibayashi
  */
 public class Converters {
-    //TODO command converter
-
     @BindingConversion
     public static String convertOffsetDateTime(OffsetDateTime dateTime) {
         return dateTime != null ? dateTime.format(DateTimeFormatter.ISO_OFFSET_DATE_TIME) : "";
