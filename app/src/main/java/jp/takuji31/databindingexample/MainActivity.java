@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                viewModel.setFirstName(s.toString());
+                viewModel.setLastName(s.toString());
             }
 
             @Override
