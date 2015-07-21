@@ -30,7 +30,6 @@ public class ViewModel extends BaseObservable {
     public void setFirstName(String firstName) {
         this.firstName = firstName;
         notifyPropertyChanged(BR.firstName);
-        notifyPropertyChanged(BR.fullName);
     }
 
     public String getLastName() {
@@ -40,12 +39,6 @@ public class ViewModel extends BaseObservable {
     public void setLastName(String lastName) {
         this.lastName = lastName;
         notifyPropertyChanged(BR.lastName);
-        notifyPropertyChanged(BR.fullName);
-    }
-
-    @Bindable
-    public String getFullName() {
-        return TextUtils.join(" ", Arrays.asList(firstName, lastName));
     }
 
     public OffsetDateTime getLastUpdated() {
